@@ -17,8 +17,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krk-1F-Ubx">
-                                <rect key="frame" x="50" y="500" width="100" height="100"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <rect key="frame" x="48.333333333333343" y="607.66666666666663" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="-"/>
@@ -27,8 +27,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgn-vp-p2Y">
-                                <rect key="frame" x="250" y="500" width="100" height="100"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <rect key="frame" x="244.66666666666663" y="607.66666666666663" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <inset key="contentEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -37,35 +37,64 @@
                                     <action selector="plusActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LJD-XL-xzh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eL-cJ-O16">
-                                <rect key="frame" x="140" y="216" width="113" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eL-cJ-O16">
+                                <rect key="frame" x="146.66666666666666" y="125.33333333333331" width="100" height="100"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf6-3O-v17">
+                                <rect key="frame" x="146.66666666666666" y="695.33333333333337" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="gobackward.5.ar" catalog="system">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="blT-Mq-LLV"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="g3w-zc-agR">
+                                <rect key="frame" x="46.666666666666657" y="244.66666666666663" width="300" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">UITextView supports the display of text using custom style information and also supports text editing. You typically use a text view to display multiple lines of text, such as when displaying the body of a large text document.
+This class supports multiple text styles through use of the attributedText property. (Styled text isn’t supported in versions of iOS earlier than iOS 6.) Setting a value for this property causes the text view to use the style information provided in the attributed string. You can still use the font, textColor, and textAlignment properties to set style attributes, but those properties apply to all of the text in the text view. It’s recommended that you use a text view—and not a UIWebView object—to display both plain and rich text in your app.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Krk-1F-Ubx" secondAttribute="bottom" constant="218" id="2sl-kr-cga"/>
-                            <constraint firstItem="cgn-vp-p2Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="250" id="Bgx-Ie-jgA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cgn-vp-p2Y" secondAttribute="trailing" constant="43" id="LTp-Uz-v3O"/>
-                            <constraint firstItem="Krk-1F-Ubx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="441" id="SZE-dv-QUK"/>
-                            <constraint firstItem="Krk-1F-Ubx" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.254453" id="Wek-9z-Pje"/>
-                            <constraint firstItem="Krk-1F-Ubx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Xag-d1-FsG"/>
-                            <constraint firstItem="cgn-vp-p2Y" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.254453" id="c9G-Tn-ekx"/>
-                            <constraint firstItem="cgn-vp-p2Y" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.131752" id="fJt-uA-P8W"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Krk-1F-Ubx" secondAttribute="trailing" constant="243" id="fgX-0J-03p"/>
-                            <constraint firstItem="Krk-1F-Ubx" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.131752" id="jRK-YI-Z1S"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cgn-vp-p2Y" secondAttribute="bottom" constant="218" id="liR-Pf-6IK"/>
-                            <constraint firstItem="cgn-vp-p2Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="441" id="nFB-Cc-G1C"/>
+                            <constraint firstItem="Krk-1F-Ubx" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.254453" id="0nF-eE-UWF"/>
+                            <constraint firstItem="Krk-1F-Ubx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.5" id="53l-1f-8tq"/>
+                            <constraint firstItem="8eL-cJ-O16" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.4" id="59o-6W-DsW"/>
+                            <constraint firstItem="cgn-vp-p2Y" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="1.5" id="7Lu-M5-kFf"/>
+                            <constraint firstItem="8eL-cJ-O16" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.254453" id="DDC-6q-cc3"/>
+                            <constraint firstItem="Krk-1F-Ubx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="0.5" id="Fck-pe-JRZ"/>
+                            <constraint firstItem="jf6-3O-v17" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.7" id="Gha-pl-cmC"/>
+                            <constraint firstItem="cgn-vp-p2Y" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.254453" id="LSW-fs-69L"/>
+                            <constraint firstItem="g3w-zc-agR" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.9" id="P3Y-fU-emF"/>
+                            <constraint firstItem="jf6-3O-v17" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.254453" id="POm-Bf-rsq"/>
+                            <constraint firstItem="g3w-zc-agR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SPj-1d-72D"/>
+                            <constraint firstItem="cgn-vp-p2Y" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.131752" id="Upf-Ch-rRf"/>
+                            <constraint firstItem="g3w-zc-agR" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.395257" id="V1S-5n-c74"/>
+                            <constraint firstItem="cgn-vp-p2Y" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.5" id="aqS-DN-hPO"/>
+                            <constraint firstItem="jf6-3O-v17" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.131752" id="fao-dZ-Zbv"/>
+                            <constraint firstItem="8eL-cJ-O16" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gDo-6Q-62h"/>
+                            <constraint firstItem="Krk-1F-Ubx" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.131752" id="iqo-2i-SH2"/>
+                            <constraint firstItem="8eL-cJ-O16" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.131752" id="man-ry-BgK"/>
+                            <constraint firstItem="g3w-zc-agR" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.763359" id="oCJ-CQ-MAf"/>
+                            <constraint firstItem="jf6-3O-v17" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vvq-jx-IlA"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="counterLabel" destination="8eL-cJ-O16" id="DYs-gy-pHu"/>
+                        <outlet property="logText" destination="g3w-zc-agR" id="MuJ-gi-4WZ"/>
                         <outlet property="minusButton" destination="Krk-1F-Ubx" id="fCl-r9-Y0X"/>
                         <outlet property="plusButton" destination="cgn-vp-p2Y" id="OHJ-YL-FxP"/>
+                        <outlet property="resetButton" destination="jf6-3O-v17" id="5b6-l7-dC1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -74,11 +103,21 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gobackward.5.ar" catalog="system" width="119" height="128"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
