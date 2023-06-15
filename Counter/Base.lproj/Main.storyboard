@@ -57,8 +57,8 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="g3w-zc-agR">
                                 <rect key="frame" x="46.666666666666657" y="244.66666666666663" width="300" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">UITextView supports the display of text using custom style information and also supports text editing. You typically use a text view to display multiple lines of text, such as when displaying the body of a large text document.
-This class supports multiple text styles through use of the attributedText property. (Styled text isn’t supported in versions of iOS earlier than iOS 6.) Setting a value for this property causes the text view to use the style information provided in the attributed string. You can still use the font, textColor, and textAlignment properties to set style attributes, but those properties apply to all of the text in the text view. It’s recommended that you use a text view—and not a UIWebView object—to display both plain and rich text in your app.</mutableString>
+                                <string key="text">UITextView supports the display of text using custom style information and also supports text editing. You typically use a text view to display multiple lines of text, such as when displaying the body of a large text document.
+This class supports multiple text styles through use of the attributedText property. (Styled text isn’t supported in versions of iOS earlier than iOS 6.) Setting a value for this property causes the text view to use the style information provided in the attributed string. You can still use the font, textColor, and textAlignment properties to set style attributes, but those properties apply to all of the text in the text view. It’s recommended that you use a text view—and not a UIWebView object—to display both plain and rich text in your app.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -91,7 +91,7 @@ This class supports multiple text styles through use of the attributedText prope
                     </view>
                     <connections>
                         <outlet property="counterLabel" destination="8eL-cJ-O16" id="DYs-gy-pHu"/>
-                        <outlet property="logText" destination="g3w-zc-agR" id="MuJ-gi-4WZ"/>
+                        <outlet property="logTextView" destination="g3w-zc-agR" id="MuJ-gi-4WZ"/>
                         <outlet property="minusButton" destination="Krk-1F-Ubx" id="fCl-r9-Y0X"/>
                         <outlet property="plusButton" destination="cgn-vp-p2Y" id="OHJ-YL-FxP"/>
                         <outlet property="resetButton" destination="jf6-3O-v17" id="5b6-l7-dC1"/>

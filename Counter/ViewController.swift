@@ -9,22 +9,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var counterLabel: UILabel!
+    @IBOutlet private weak var counterLabel: UILabel!
     
-    @IBOutlet weak var plusButton: UIButton!
-    @IBOutlet weak var minusButton: UIButton!
-    @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet private weak var plusButton: UIButton!
+    @IBOutlet private weak var minusButton: UIButton!
+    @IBOutlet private weak var resetButton: UIButton!
     
-    @IBOutlet weak var logText: UITextView!
-    
+    @IBOutlet private weak var logTextView: UITextView!
+
     private let dateFormatter: DateFormatter = DateFormatter()
-    
+
     private var counterNumber: Int = 0 {
         willSet {
             counterLabel.text = newValue.description
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,35 +42,45 @@ class ViewController: UIViewController {
         resetButton.titleLabel?.font = .systemFont(ofSize: 50)
         
         //Text config
-        logText.text = "История изменений:\n"
-        logText.isEditable = false
+        logTextView.text = "История изменений:\n"
+        logTextView.isEditable = false
         
         //Time config
         dateFormatter.timeStyle = .medium
         dateFormatter.dateStyle = .medium
     }
     
-    @IBAction func plusActionButton(_ sender: Any) {
-        counterNumber += 1
-        logText.text.append("[\(getCurrentTime())]: значение изменено на +1\n")
-    }
-    
-    @IBAction func minusActionButton(_ sender: Any) {
-        if (counterNumber > 0) {
-            counterNumber -= 1
-            logText.text.append("[\(getCurrentTime())]: значение изменено на -1\n")
-        } else {
-            logText.text.append("[\(getCurrentTime())]: попытка уменьшить значение счётчика ниже 0\n")
-        }
-    }
-    
-    @IBAction func resetActionButton(_ sender: Any) {
-        counterNumber = 0
-        logText.text.append("[\(getCurrentTime())]: значение сброшено\n")
-    }
-    
     private func getCurrentTime() -> String {
         let currentDateTime = Date()
         return self.dateFormatter.string(from: currentDateTime)
+    }
+    
+    private func setScrollRangeToVisible() {
+        let range = NSMakeRange(logTextView.text.count - 1, 0)
+        logTextView.scrollRangeToVisible(range)
+    }
+    
+    private func log(_ message: String) {
+        logTextView.text.append("[\(getCurrentTime())]: \(message)\n")
+        setScrollRangeToVisible()
+    }
+
+    @IBAction private func plusActionButton(_ sender: Any) {
+        counterNumber += 1
+        log("значение изменено на +1")
+    }
+
+    @IBAction private func minusActionButton(_ sender: Any) {
+        if (counterNumber > 0) {
+            counterNumber -= 1
+            log("значение изменено на -1")
+        } else {
+            log("попытка уменьшить значение счётчика ниже 0")
+        }
+    }
+
+    @IBAction private func resetActionButton(_ sender: Any) {
+        counterNumber = 0
+        log("значение сброшено")
     }
 }
